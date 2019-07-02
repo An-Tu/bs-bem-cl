@@ -5,12 +5,6 @@ describe("BemCl tests 2", () => {
 
   let blockName = "some-block";
   let b = BemCl.make(blockName);
-  Js.log(
-    b(
-      ~mods=[BemCl.Bool(("loading", true)), BemCl.Bool(("disabled", true))],
-      (),
-    ),
-  );
 
   test("block name", () =>
     expect(b()) |> toBe(blockName)
