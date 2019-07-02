@@ -2,6 +2,24 @@
 
 Simple reimplementation of [BEM class name generator](https://github.com/znamilya/bem-cl) in [ReasonML](https://reasonml.github.io).
 
+## Installation
+
+```shell
+# npm
+npm install --save bs-bem-cl
+
+# yarn
+yarn add bs-bem-cl
+```
+
+Then add it to `bsconfig.json`:
+
+```json
+"bs-dependencies": [
+  "bs-bem-cl"
+]
+```
+
 ## Usage
 
 Get `BemCl` instance
