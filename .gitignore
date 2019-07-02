@@ -1,0 +1,10 @@
+.DS_Store
+.merlin
+.bsb.lock
+npm-debug.log
+*.bs.js
+/coverage/
+/lib/bs/
+/.vscode/
+/.idea/
+/node_modules/

@@ -1,0 +1,38 @@
+{
+  "name": "bs-bem-cl",
+  "version": "0.1.0",
+  "description": "Simple reimplementation of BEM class name generator in ReasonML",
+  "main": "src/BemCl.re",
+  "author": "Anton Tuzhik <tuzhikaa@gmail.com>",
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "test": "npm run build && jest --coverage"
+  },
+  "files": [
+    "src",
+    "bsconfig.json"
+  ],
+  "keywords": [
+    "reason",
+    "reasonml",
+    "ocaml",
+    "bucklescript",
+    "bem",
+    "class",
+    "className"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/An-Tu/bs-bem-cl.git"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "bs-platform": "^5.0.0"
+  },
+  "devDependencies": {
+    "@glennsl/bs-jest": "0.4.8",
+    "bs-platform": "5.0.4"
+  }
+}
