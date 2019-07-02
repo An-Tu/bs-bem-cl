@@ -4,7 +4,7 @@ Simple reimplementation of [BEM class name generator](https://github.com/znamily
 
 ## Usage
 
-Get `Bc` instance
+Get `BemCl` instance
 
 ```reason
 let b = Bc.make("button");
