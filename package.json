@@ -1,8 +1,8 @@
 {
   "name": "bs-bem-cl",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Simple reimplementation of BEM class name generator in ReasonML",
-  "main": "src/BemCl.re",
+  "main": "src/Bc.re",
   "author": "Anton Tuzhik <tuzhikaa@gmail.com>",
   "scripts": {
     "build": "bsb -make-world",
