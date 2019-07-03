@@ -1,11 +1,7 @@
 {
   "name": "bs-bem-cl",
-  "version": "0.3.0",
   "sources": [
-    {
-      "dir": "src",
-      "subdirs": true
-    },
+    "src",
     {
       "dir": "__tests__",
       "type": "dev"
@@ -19,9 +15,8 @@
   "bs-dependencies": [
     "@glennsl/bs-jest"
   ],
-  "warnings": {
-    "error": "+101"
-  },
-  "namespace": true,
+  "bsc-flags": [
+    "-bs-super-errors"
+  ],
   "refmt": 3
 }
