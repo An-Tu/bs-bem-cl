@@ -47,3 +47,5 @@ let bemCl = (block, ~elem=?, ~mods=?, ()) => {
 };
 
 let make = block => bemCl(block);
+
+let mix = (firstClass, secondClass) => firstClass ++ " " ++ secondClass;

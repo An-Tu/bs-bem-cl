@@ -154,3 +154,10 @@ b(
     ()
 ) /* => "button__icon button__icon_theme_green button__icon_disabled" */
 ```
+
+You can mix different classes
+
+```reason
+b(~elem="icon", ())
+->Bc.mix("some__class") /* => "button__icon some__class" */
+```

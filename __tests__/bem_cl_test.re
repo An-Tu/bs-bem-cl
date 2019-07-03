@@ -109,4 +109,12 @@ describe("Bc tests 2", () => {
          ++ mod_,
        );
   });
+
+  test("mix different classes", () => {
+    let someClass = "some__class";
+    let elem = "elem";
+
+    expect(b(~elem, ())->Bc.mix(someClass))
+    |> toBe(blockName ++ "__" ++ elem ++ " " ++ someClass);
+  });
 });
