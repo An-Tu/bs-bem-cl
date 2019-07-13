@@ -1,6 +1,6 @@
 type modifier =
-  | Bool((string, bool))
-  | KeyValue((string, string));
+  | Bool(string, bool)
+  | KeyValue(string, string);
 
 type modifiers = list(modifier);
 
@@ -9,13 +9,13 @@ let modDivider = "_";
 
 let formatModifier = (block, ~elem=?, mods) => {
   switch (elem, mods) {
-  | (None, Bool((mod_, isActive))) =>
+  | (None, Bool(mod_, isActive)) =>
     isActive ? " " ++ block ++ modDivider ++ mod_ : ""
-  | (None, KeyValue((key, value))) =>
+  | (None, KeyValue(key, value)) =>
     " " ++ block ++ modDivider ++ key ++ modDivider ++ value
-  | (Some(elem), Bool((mod_, isActive))) =>
+  | (Some(elem), Bool(mod_, isActive)) =>
     isActive ? " " ++ block ++ elemDivider ++ elem ++ modDivider ++ mod_ : ""
-  | (Some(elem), KeyValue((key, value))) =>
+  | (Some(elem), KeyValue(key, value)) =>
     " "
     ++ block
     ++ elemDivider

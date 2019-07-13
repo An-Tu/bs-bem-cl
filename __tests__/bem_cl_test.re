@@ -17,19 +17,19 @@ describe("Bc tests 2", () => {
 
   test("add bool modifier - true", () => {
     let mod1 = "mod";
-    expect(b(~mods=[Bc.Bool((mod1, true))], ()))
+    expect(b(~mods=[Bc.Bool(mod1, true)], ()))
     |> toBe(blockName ++ " " ++ blockName ++ "_" ++ mod1);
   });
 
   test("add bool modifier - false", () => {
     let mod1 = "mod";
-    expect(b(~mods=[Bc.Bool((mod1, false))], ())) |> toBe(blockName);
+    expect(b(~mods=[Bc.Bool(mod1, false)], ())) |> toBe(blockName);
   });
 
   test("add key value modifier", () => {
     let key = "key";
     let value = "value";
-    expect(b(~mods=[Bc.KeyValue((key, value))], ()))
+    expect(b(~mods=[Bc.KeyValue(key, value)], ()))
     |> toBe(blockName ++ " " ++ blockName ++ "_" ++ key ++ "_" ++ value);
   });
 
@@ -37,7 +37,7 @@ describe("Bc tests 2", () => {
     let elem = "element";
     let key = "key";
     let value = "value";
-    expect(b(~elem, ~mods=[Bc.KeyValue((key, value))], ()))
+    expect(b(~elem, ~mods=[Bc.KeyValue(key, value)], ()))
     |> toBe(
          blockName
          ++ "__"
@@ -56,7 +56,7 @@ describe("Bc tests 2", () => {
   test("add element and bool modifier - true", () => {
     let elem = "element";
     let mod_ = "mod";
-    expect(b(~elem, ~mods=[Bc.Bool((mod_, true))], ()))
+    expect(b(~elem, ~mods=[Bc.Bool(mod_, true)], ()))
     |> toBe(
          blockName
          ++ "__"
@@ -73,7 +73,7 @@ describe("Bc tests 2", () => {
   test("add element and bool modifier - fasle", () => {
     let elem = "element";
     let mod_ = "mod";
-    expect(b(~elem, ~mods=[Bc.Bool((mod_, false))], ()))
+    expect(b(~elem, ~mods=[Bc.Bool(mod_, false)], ()))
     |> toBe(blockName ++ "__" ++ elem);
   });
 
@@ -83,11 +83,7 @@ describe("Bc tests 2", () => {
     let key = "key";
     let value = "value";
     expect(
-      b(
-        ~elem,
-        ~mods=[Bc.KeyValue((key, value)), Bc.Bool((mod_, true))],
-        (),
-      ),
+      b(~elem, ~mods=[Bc.KeyValue(key, value), Bc.Bool(mod_, true)], ()),
     )
     |> toBe(
          blockName
