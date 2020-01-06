@@ -1,6 +1,6 @@
 {
   "name": "bs-bem-cl",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Simple reimplementation of BEM class name generator in ReasonML",
   "main": "src/Bc.re",
   "author": "Anton Tuzhik <tuzhikaa@gmail.com>",
@@ -29,10 +29,10 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "bs-platform": "^5.0.0"
+    "bs-platform": "^7.0.0"
   },
   "devDependencies": {
-    "@glennsl/bs-jest": "0.4.8",
-    "bs-platform": "5.0.6"
+    "@glennsl/bs-jest": "0.4.9",
+    "bs-platform": "7.0.1"
   }
 }
