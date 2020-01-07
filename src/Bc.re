@@ -27,12 +27,13 @@ let formatModifier = (block, ~elem=?, mods) => {
   };
 };
 
-let rec formatModifiers = (block, ~elem=?, mods) => {
+let rec formatModifiers = (block, ~elem=?, ~mods, ~acc="", ()) => {
   switch (mods) {
-  | [] => ""
-  | [mod_, ...rest] =>
-    formatModifier(block, ~elem?, mod_)
-    ++ formatModifiers(block, ~elem?, rest)
+  | [] => acc
+  | [mod_, ...rest] => {
+      let acc = acc ++ formatModifier(block, ~elem?, mod_);
+      formatModifiers(block, ~elem?, ~mods=rest, ~acc, ());
+    }
   };
 };
 
@@ -40,9 +41,9 @@ let bemCl = (block, ~elem=?, ~mods=?, ()) => {
   switch (elem, mods) {
   | (None, None) => block
   | (Some(elem), None) => block ++ elemDivider ++ elem
-  | (None, Some(mods)) => block ++ formatModifiers(block, ~elem?, mods)
+  | (None, Some(mods)) => block ++ formatModifiers(block, ~elem?, ~mods, ())
   | (Some(elem), Some(mods)) =>
-    block ++ elemDivider ++ elem ++ formatModifiers(block, ~elem, mods)
+    block ++ elemDivider ++ elem ++ formatModifiers(block, ~elem, ~mods, ())
   };
 };
 
