@@ -1,6 +1,6 @@
 # bs-bem-cl
 
-Simple reimplementation of [BEM class name generator](https://github.com/znamilya/bem-cl) in [ReasonML](https://reasonml.github.io).
+Simple reimplementation of [BEM class name generator](https://github.com/znamilya/bem-cl) in [ReScript](https://rescript-lang.org/).
 
 ## Installation
 
@@ -24,19 +24,19 @@ Then add it to `bsconfig.json`:
 
 Get `BemCl` instance
 
-```reason
-let b = Bc.make("button");
+```rescript
+let b = Bc.make("button")
 ```
 
 Create BEM block
 
-```reason
+```rescript
 b() /* => "button" */
 ```
 
 Create BEM elements
 
-```reason
+```rescript
 b(~elem="icon", ()) /* => "button__icon" */
 
 b(~elem="text", ()) /* => "button__text" */
@@ -44,7 +44,7 @@ b(~elem="text", ()) /* => "button__text" */
 
 Create BEM block with key/value modifiers
 
-```reason
+```rescript
 b(~mods=[Bc.KeyValue("theme", "green")], ()) /* => "button button_theme_green" */
 
 b(
@@ -58,7 +58,7 @@ b(
 
 Create BEM block with bool modifiers
 
-```reason
+```rescript
 b(~mods=[Bc.Bool("loading", true)], ()) /* => "button button_loading" */
 
 b(~mods=[Bc.Bool("loading", false)], ()) /* => "button" */
@@ -82,7 +82,7 @@ b(
 
 Create BEM element with key/value modifiers
 
-```reason
+```rescript
 b(
     ~elem="icon",
     ~mods=[Bc.KeyValue("theme", "green")],
@@ -101,7 +101,7 @@ b(
 
 Create BEM element with bool modifiers
 
-```reason
+```rescript
 b(
     ~elem="icon",
     ~mods=[Bc.Bool("loading", true)],
@@ -135,7 +135,7 @@ b(
 
 You can mix key/value and bool modifiers
 
-```reason
+```rescript
 b(
     ~mods=[
         Bc.KeyValue("theme", "green"),
@@ -157,7 +157,7 @@ b(
 
 You can mix different classes
 
-```reason
+```rescript
 b(~elem="icon", ())
 ->Bc.mix("some__class") /* => "button__icon some__class" */
 ```
