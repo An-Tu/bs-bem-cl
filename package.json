@@ -1,13 +1,13 @@
 {
   "name": "bs-bem-cl",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Simple reimplementation of BEM class name generator in ReScript",
   "main": "src/Bc.re",
   "author": "Anton Tuzhik <tuzhikaa@gmail.com>",
   "scripts": {
-    "build": "bsb -make-world",
-    "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world",
+    "build": "rescript",
+    "start": "rescript build -w",
+    "clean": "rescript clean",
     "test": "npm run build && jest --coverage"
   },
   "files": [
@@ -30,10 +30,10 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "bs-platform": "^8.0.0"
+    "rescript": "^9.1.0"
   },
   "devDependencies": {
     "@glennsl/bs-jest": "0.7.0",
-    "bs-platform": "9.0.2"
+    "rescript": "^9.1.4"
   }
 }
