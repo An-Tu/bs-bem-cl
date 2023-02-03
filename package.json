@@ -30,10 +30,10 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "rescript": "^9.1.0"
+    "rescript": "^9.0.0 || ^10.0.0"
   },
   "devDependencies": {
     "@glennsl/bs-jest": "0.7.0",
-    "rescript": "^9.1.4"
+    "rescript": "^10.1.2"
   }
 }
