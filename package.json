@@ -1,6 +1,6 @@
 {
   "name": "bs-bem-cl",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Simple reimplementation of BEM class name generator in ReScript",
   "main": "src/Bc.re",
   "author": "Anton Tuzhik <tuzhikaa@gmail.com>",
@@ -30,7 +30,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "rescript": "^9.0.0 || ^10.0.0"
+    "rescript": "^9.0.0 || ^10.0.0 || ^11.0.0"
   },
   "devDependencies": {
     "@glennsl/bs-jest": "0.7.0",
