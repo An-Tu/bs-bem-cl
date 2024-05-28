@@ -25,7 +25,7 @@ let formatModifiers = (block, ~elem=?, ~mods, ()) => {
   acc.contents
 }
 
-let bemCl = (block, ~elem=?, ~mods=?, ()) =>
+let bemCl = (block, ~elem=?, ~mods=?) =>
   switch (elem, mods) {
   | (None, None) => block
   | (Some(elem), None) => block ++ elemDivider ++ elem
@@ -34,6 +34,6 @@ let bemCl = (block, ~elem=?, ~mods=?, ()) =>
     block ++ elemDivider ++ elem ++ formatModifiers(block, ~elem, ~mods, ())
   }
 
-let make = block => bemCl(block)
+let make = block => bemCl(block, ...)
 
 let mix = (firstClass, secondClass) => firstClass ++ " " ++ secondClass
