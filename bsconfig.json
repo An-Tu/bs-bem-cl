@@ -13,7 +13,7 @@
   },
   "suffix": ".bs.js",
   "bs-dev-dependencies": [
-    "@glennsl/bs-jest"
+    "@glennsl/rescript-jest"
   ],
   "bsc-flags": [
     "-bs-super-errors"
