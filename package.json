@@ -1,6 +1,6 @@
 {
   "name": "bs-bem-cl",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Simple reimplementation of BEM class name generator in ReScript",
   "main": "src/Bc.re",
   "author": "Anton Tuzhik <tuzhikaa@gmail.com>",
